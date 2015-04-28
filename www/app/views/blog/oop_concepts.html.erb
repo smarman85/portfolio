@@ -1,0 +1,73 @@
+<section class="blog_content">
+    <h2>Variable Scope</h2>
+    <span class="date_posted">Posted On: 09.13.14</span>
+
+     <article>
+
+         <p>
+             Scope is used to determine where in a program a specific variable is accessible. In ruby there are four standard scopes local, global, instance, class and one special one called a constant.  To avoid a little bit of confusion, the variables begin with different symbols to help you easily recognize what scope they have.
+         </p>
+
+         <p>
+             Local variables in Ruby, as I am sure we are all well aware of by now, can start with any letter or “_”.  These types of variables are only available within the construct they are declared in. In a program, these variables look like this:
+         </p>
+
+         <div class="mark-down">
+             <span class="ruby-identifier">example</span><span class="ruby-keyword">&nbsp;=&nbsp;</span>
+             <span class="ruby-constant">“Hello World”</span>
+         </div>
+
+         <p>
+             or
+         </p>
+
+         <div class="mark-down">
+             <span class="ruby-identifier">_example</span><span class="ruby-keyword">&nbsp;=&nbsp;</span>
+             <span class="ruby-constant">“Hello World”</span>
+         </div>
+
+         <p>
+             The next step in terms of scope is the global variable. These are available everywhere, inside or out of the construct they are created in. This is nice for accessibility but could be detrimental to a programs functionality. Part of being accessible everywhere means it can be changed everywhere.
+         </p>
+
+         <div class="mark-down">
+             <span class="ruby-identifier">$example</span><span class="ruby-keyword">&nbsp;=&nbsp;</span>
+             <span class="ruby-constant">“Hello World”</span>
+         </div>
+
+         <p>
+             Class variables are shared throughout every instance of a class. This functions very similar to a global variable but, only as far as the class it is defined in. This means that If there is a changed to the variable inside a method it is changed everywhere in the class. Class variables look very similar to instance variable, only with two “@“ symbols like this:
+         </p>
+
+         <div class="mark-down">
+             <span class="ruby-identifier">@@example</span><span class="ruby-keyword">&nbsp;=&nbsp;</span>
+             <span class="ruby-constant">“Hello World”</span>
+         </div>
+
+         <p>
+             Instance Variables are very similar to class variables, but their values are only accessible to the specific instances of an object. These variables work well for changing a variable to work in a specific class and not overwriting the variable for the whole class. Instance variables are individual to the method they are used in.
+         </p>
+
+         <div class="mark-down">
+             <span class="ruby-identifier">@example</span><span class="ruby-keyword">&nbsp;=&nbsp;</span>
+             <span class="ruby-constant">“Hello World”</span>
+         </div>
+
+         </p>
+
+         <p>
+             All this brings us to our special variable scope, the constant. Constants, as their name suggests, are variables that should not be changed. They are available to the whole class they are defined in; however, an important thing to note is, if they are declared outside of a class the are assigned a global scope. Constants are declared
+             in all caps like so:
+         </p>
+         <div class="mark-down">
+             <span class="ruby-identifier">EXAMPLE</span><span class="ruby-keyword">&nbsp;=&nbsp;</span>
+             <span class="ruby-constant">“Hello World”</span>
+         </div>
+
+         <p>
+             Detecting Scope more easily. <br><br>
+
+             At times the scope of the variable can be a little unclear. Calling #defined? on a variable with return the scope of the variable.
+         </p>
+    </article>
+</section>

@@ -1,0 +1,39 @@
+
+input[type="text"], input[type="email"], textarea {
+
+    border: none;
+    color: #525252;
+    height: 25px;
+    line-height:15px;
+    margin-bottom: 16px;
+    margin-right: 6px;
+    margin-top: 2px;
+    outline: 0 none;
+    padding: 5px 0px 5px 5px;
+    width: 70%;
+    background: #DFDFDF;
+}
+
+textarea{
+    height:400px;
+    padding: 5px 0px 0px 5px;
+    width: 70%;
+}
+
+input[type="submit"], button {
+    background: #FFCC02;
+    border: none;
+    padding: 10px 25px 10px 25px;
+    color: #585858;
+    text-shadow: 1px 1px 1px #FFE477;
+    font-weight: bold;
+    box-shadow: 1px 1px 1px #3D3D3D;
+    -webkit-box-shadow:1px 1px 1px #3D3D3D;
+    -moz-box-shadow:1px 1px 1px #3D3D3D;
+    cursor: pointer;
+}
+
+.button:hover {
+    color: #333;
+    background-color: #EBEBEB;
+}

@@ -1,0 +1,59 @@
+<section class="blog_content">
+    <h2>Ruby Arrays and Hashes</h2>
+    <span class="date_posted">Posted On: 10.02.14</span>
+
+    <article>
+
+        <p>
+            Arrays and Hashes are very similar concepts in programing. Both are perfectly valid ways of holding a collection of data. Where these concepts truly differ is in how their information is accessed.
+        </p>
+
+        <p>
+            Arrays are ordered, integer-indexed and like most programing languages zero-indexed.  This basically means that the elements contained in an array are in some type of order starting at 0. For instance, in the array below, the number 1 is in the zero position. The next element is in the 1 position and so on.
+        </p>
+        <div class="mark-down">
+            <span class="ruby-constant">array</span><span class="ruby-identifier">     =&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   [1,  2,  3,  4,   “string”] <br>
+            position  L &nbsp;     0   1   2   3    4 <br>
+            position R   -5  -4 -3  -2     -1 <br>
+        </span>
+        </div>
+        <p>
+            If we wanted to access the word string in the above array, we could do this in one of two ways. Since “string” is at index 4 we could access the element by calling the array with the index number in square brackets. Like so:
+        </p>
+        <div class="mark-down">
+            <span class="ruby-constant">array</span><span class="ruby-identifier">[4]</span>
+        </div>
+
+        <p>
+            Another way we could access the same information has to do with the elements position from the end of the array. This is a little bit different from the normal, when basing position on the last element in the array we have to start at -1. This method is a great way to return the last element in an array of unknown depth. So based on the above array we could simply call:
+        </p>
+        <div class="mark-down">
+            <span class="ruby-constant">array</span><span class="ruby-identifier">[-1]</span>
+        </div>
+        <p>
+            and we would get the word “string” from the same array.
+        </p>
+        <p>
+            Hashes are great when your looking to store key-value paris. They function similarly to arrays but differ in the way you would index the information inside of them. Where arrays are based on 0 to the end of the array, Hashes are based on an arbitrary list of keys and values with no discernible order.
+        </p>
+        <p>
+            An easy way to wrap your mind around what hashes are, is to think of them as a dictionary. Keys are like words and Values are like their definitions. For example lets build a hash that stores the ages of 3 dogs.
+        </p>
+        <div class="mark-down">
+            <span class="ruby-constant">ages</span><span class="ruby-identifier"> = { <span class="line-break"><br>
+               &nbsp;&nbsp;&nbsp;:Toby => 2, <br>
+                &nbsp;&nbsp;&nbsp;:Klondike => 3, <br>
+                &nbsp;&nbsp;&nbsp;:Lucky => 11 </span><br>
+            }</span>
+        </div>
+        <p>
+            If we wanted to get the age of a dog and we only knew the name, we could index the has
+        </p>
+        <div class="mark-down">
+            <span class="ruby-constant">ages</span><span class="ruby-identifier">[:Toby]</span>
+        </div>
+
+        </p>
+
+    </article>
+</section>

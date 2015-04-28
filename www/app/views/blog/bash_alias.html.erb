@@ -1,0 +1,80 @@
+<section class="blog_content">
+  <h2>Productivity with Bash</h2>
+  <span class="date_posted">Posted On: 01.17.15</span>
+
+  <article>
+
+    <p>
+        Computers are amazing at making repetative tasks faster and less tedious, so why do we insist on running the same long winded bash command over and over again. Well search no longer, there are some great bash alias you can create to make your typing slightly more enjoyable; not to mention, people will think you're magic. Over the course of this tutorial, we are going to cover simple bash aliases and some simple functions. Without further ado, bash alias' can take a lot of the typing out of running command on your computer. We will start off with a simple alias that will take you to a specific directory on your computer regardless of your pwd.
+    </p>
+
+    <p>
+        I tend to keep all of my repositories in my documents folder so changing directories used to look someting like this for me.
+    </p>
+
+    <div class="mark-down">
+      <span class="ruby-constant">$ cd /Users/username/Documents/repos/DBC </span>
+    </div>
+
+    <p>
+        With a little bit of bash knowledge we could cut 20 plus letters from a simple command. First off we need to know the our username on the computer we are working on. On the command line we run the following command to get that information.
+    <div class="mark-down">
+      <span class="ruby-constant">$ whoami</span>
+    </div>
+    </p>
+
+    <p>
+        Then from inside the directory we desire to cd into much faster, you can run "pwd" to get the present working directory. Once armed with all of this information we need to open up our .bash_profile, which lives at the root of our machine. For ease of use we are going to use VIM to open the file. On the command line we are going to run.
+    </p>
+
+    <div class="mark-down">
+      <span class="ruby-constant">vim ~/.bash_profile</span>
+    </div>
+
+    <p>
+      Inside this file we will find a lot of aliases and other very usefull information about our user setting, but for now all we are interested in is adding the following command to the profile. A few usefull vim commands to help you along are shift + G will take you to the end of the file and "i" will place you into insert mode, so you can type.
+    </p>
+
+    <div class="mark-down">
+      <span class="ruby-constant">alias dbc=' cd /Users/username_that_you_found_with_whoami/Documents/repos/DBC/' </span>
+    </div>
+
+    <p>
+      ** important, there can be no spaces between the alias name, the '=' and the begining of the "'". Once all of this is in place, hit the escape key a few times to take you out of insert mode and type :wq to save the document and close it. After you restart your terminal all you need to do is type 'dbc' in the command line and hit enter to wisk yourself over to your linked repo.
+    </p>
+
+    <p>
+      Aliases work well for static commands, but what if we want to open up different files to see how they run in Chrome. The basic way would be to cd into the directory your file lives in and run the command:
+    </p>
+    <div class="mark-down">
+      <span class="ruby-constant">
+        $ open -a "Google Chrome" index.html
+      </span>
+    </div>
+
+    <p>
+      This works well for a while, but we are devlopers damit, there must be an easier way to this, well as you may have guessed, there is. In our bash profile we are allowed to write functions that accept arguments, just like any other Ruby, JS, or PHP file. With the following command in our bash profile, we can create a named function, we will call "Chrome" but you can call it what ever your heart desires.
+    </p>
+
+    <div class="mark-down">
+      <span class="ruby-constant">
+        function chrome() { open -a "Google Chrome" "$1"; }
+      </span>
+    </div>
+
+    <p>
+      After we restart our terminal we are able run the following in our terminal to open the index.html file, in our current directory.
+    </p>
+
+    <div class="mark-down">
+      <span class="ruby-constant">
+        $ chrome index.html
+      </span>
+    </div>
+
+    <p>
+      Here we didn't save too many letters, but for ease of use I think this is an amazing tool to speed up any workflow. Well that's all for now, I will keep researching and come up with some more shortcuts soon.
+    </p>
+
+  <article>
+</section>

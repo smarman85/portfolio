@@ -1,0 +1,42 @@
+// content for the blog and blog layout
+.blog_content {
+  width: 97%;
+  margin: 5% auto;
+
+  & h2:before {
+    display: block;
+    content: " ";
+    margin-top: -8px;
+    height: 80px;
+    visibility: hidden;
+  }
+
+  & article {
+    width: 100%;
+  }
+}
+
+article p {
+  margin: 20px 0;
+}
+
+.mark-down {
+  width: 97%;
+  background-color: $editor;
+  margin-top: 2%;
+  margin-bottom: 2px;
+  padding: 2%;
+  overflow-x: scroll;
+  & .ruby-keyword {
+    color: $ruby_keyword;  
+  }
+  & .ruby-constant {
+    color: $ruby_constant;  
+  }
+  & .ruby-identifier {
+    color: $ruby_identifier;  
+  }
+  & .ruby-constant {
+    color: $ruby_constant;  
+  }
+}

@@ -1,0 +1,27 @@
+<section class="blog_content">
+
+    <h2>Group BY</h2>
+    <span class="date_posted">Posted On: 10.12.14</span>
+
+    <article>
+
+        <p>
+            According to the Ruby-docs the group_by method “groups the collection by result of the block. Returns a hash where the keys are the evaluated result from the block and the values are arrays of elements in the collection that correspond to the key.” That is a really confusing way of saying if we are given an array of info to sort and group according the result of a condition. The condition could be anything from length or even the letter it begins with. For example, if we have an array of names and we want to group them by the length of their names we could do something like this:
+        </p>
+
+        <div class="mark-down">
+            <span class="ruby-constant">names</span><span class="ruby-identifier">  &nbsp;&nbsp;   =&nbsp;&nbsp;   ["Tom", "Jan", "Toby", "Sean", "Tiffany", "Timmy", "Scott", "April", "Roy"] <br>
+            <span class="ruby-constant">names_by_length</span><span class="ruby-identifier">&nbsp;&nbsp; = &nbsp;&nbsp;<span class="ruby-constant">names.group_by {|name| name.length}
+            <br>
+            <br>
+            We get this:
+            <br>
+            <span class="ruby-identifier">{3=>["Tom", "Jan", "Roy"], 4=>["Toby", "Sean"], 7=>["Tiffany"], 5=>["Timmy", "Scott", "April"]}</span>
+        </span>
+        </div>
+
+        <p>
+            So, what is really going on here? The group_by method loops through the elements in the array and checks the length. Once the length is determined, it (the length) is used as the key of the hash and the name as the value of the hash. On the next iteration it does the same thing, the only difference would be if the hash key already exists. If the key exists it will append the array element( in this case the name) to the matching key. When no match is found, then it builds a new key and assigns the name to the new hash key.
+        </p>
+    </article>
+</section>

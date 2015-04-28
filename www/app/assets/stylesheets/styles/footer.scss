@@ -1,0 +1,28 @@
+
+footer {
+  width: 100%;
+  background-color: $header-background;
+  margin-top: 5%;
+  padding: 4% 0;
+  & .social-links {
+    width: 40%;
+    margin: 0 auto;
+    a {
+      display: inline-block;
+      width: 19%;
+      margin-right: 4%;
+    }
+    a:nth-of-type(4) {
+      margin-right: none;
+    }
+    & img {
+      width: 80%;
+      height: auto;
+      border-radius: 18px;
+    }
+    @include mobile {
+      width: 75%;
+      margin-left: 17%;
+    }
+  }
+}

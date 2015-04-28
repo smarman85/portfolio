@@ -1,0 +1,62 @@
+<section class="blog_content">
+
+
+
+   <h2>Ruby Classes</h2>
+   <span class="date_posted">Posted On: 10.19.14</span>
+
+   <article>
+
+       <p>
+           Classes are very important part of any programing language. They allow you to make larger scale applications and not have to worry about creating unique names for methods, let alone keep track of all of their names. In a sense classes act like a blueprint for building objects and house methods for that particular set of info.
+       </p>
+
+       <p>
+           Setting up a class is very simple to do in Ruby. Over the next few steps we will be making a class that lists co-workers and the primary development language they know. For starters we can set up a new class by calling class with a name (by convention the first letter in the name is capitalized) like so:
+       </p>
+
+       <div class="mark-down">
+           <span class="ruby-keyword">def</span><span class="ruby-identifier"> &nbsp; Coworkers</span><br /><br />
+           <span class="ruby-keyword">end</span>
+       </div>
+
+       <p>
+           Once that is all set up we can jump into the whole idea behind a class being a blueprint. At this point we will want to prepare our class for some of the info we will be gathering. Since we are dealing with people, I think we should get their name, type of developer they are and language they know. We can do this in an initialize method, which is just a method used to create the objects.
+       </p>
+
+       <div class="mark-down">
+           <span class="ruby-keyword">def</span>
+           <span class="ruby-identifier"> &nbsp; Coworkers</span><br /><br />
+           &nbsp;&nbsp;&nbsp;&nbsp;<span class="ruby-keyword">def</span><span class="ruby-constant"> initialize(name, lang, dev_type)</span><br />
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="ruby-identifier">@name = name</span><br />
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="ruby-identifier">@lang = lang</span><br />
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="ruby-identifier">@dev_type = dev_type</span><br />
+           &nbsp;&nbsp;&nbsp;&nbsp;<span class="ruby-keyword">end</span><br><br>
+           &nbsp;&nbsp;&nbsp;&nbsp;<span class="ruby-keyword">def</span><span class="ruby-constant"> print_info</span><br />
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="ruby-keyword">puts</span>
+           <span class="ruby-identifier"> "#{@name} is a #{@dev_type} who works mainly in #{@lang}."</span><br />
+           &nbsp;&nbsp;&nbsp;&nbsp;<span class="ruby-keyword">end</span><br><br>
+           <span class="ruby-keyword">end</span><br><br>
+           <span class="ruby-keyword">p</span>
+           <span class="ruby-constant"> me = </span>
+           <span class="ruby-constant"> Coworkers.new("Sean", "PHP", "Backend")</span><br>
+           <span class="ruby-keyword">p</span>
+           <span class="ruby-constant"> me.print_info </span>
+
+       </div>
+
+       <p>
+           The “@“ sign tells us that this is an instance variable, which is variable used to indicate that this variable is associated with this particular instance of the class. In the above code, we are getting name and language when we initialize the class.
+       </p>
+
+       <p>
+           In the print_info method we access all of the info given and use the instance variables to print out a little blurb about specific people on the dev team. We can create new coworkers (or instances of the class) by creating a new variable and setting it equal to Coworkers.new(“Name”, “language”, “Backend”). By calling Coworkers.new with the arguments we are making a new instance of the coworker class. While this is a very simple example it can be easily expanded to include other, which makes classes a very important part of any programing language.
+       </p>
+
+       <p>
+           This is a very basic question but it sheds a little light on how to set up classes. Hope it helps.
+       </p>
+
+
+    </article>
+</section>

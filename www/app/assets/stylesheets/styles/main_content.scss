@@ -1,0 +1,125 @@
+
+// main content area of the page
+main {
+  width: 100%;
+  margin: 0 auto; 
+  & img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 3%;
+    z-index: 1;
+    -moz-box-shadow: 0 6px 4px 2px gray;
+    -webkit-box-shadow: 0 6px 4px 2px gray;
+    box-shadow: 0 6px 4px 2px gray; 
+  }
+}
+// this keeps the link from butting into the header
+h2:before {
+  display: block;
+  content: " ";
+  margin-top: -85px;
+  height: 85px;
+  visibility: hidden;
+}
+.projects, .blog {
+  margin: 5% auto;
+  width: 97%;
+  // background-color: $tab-color;
+  a {
+    color: $article-link-color;
+    text-decoration: none;
+  }
+
+  & article {
+    width: 30%;
+    float: left;
+    margin-bottom: 2%;
+    margin-left: 2%;
+    @include mobile {
+      border-bottom: 1px solid #cccccc;
+      padding: 15px 0;
+      width: 100%;
+      float: none;
+      margin: 0;
+    }
+  }
+}
+.type-container {
+  width: 25%;
+  float: left;
+}
+.type-container img {
+  width: 89%;
+}
+article .description {
+  width: 70%;
+  float: right;
+  & h1 {
+  font-family: $link-font;
+  margin-bottom: 5px;
+  font-size: 1em;
+  width: 100%;
+  }
+  & .date {
+    font-family: $date-font;
+    margin-bottom: 5px;
+    font-size: 0.8em;
+    width: 100%;
+  }
+  .text {
+    width: 100%; 
+  }
+}
+.contact_me {
+  width: 100%;
+  margin-top: 9%;
+  background-color: $tab-color;
+  & .form_container {
+    width: 70%;
+    margin: 0 auto;
+    @include mobile {
+      width: 90%;
+    }
+  }
+  .form_subject {
+    width: 45%;
+    float: left;
+  }
+  .form_email {
+    width: 45%;
+    float: right;
+  }
+  #contact_text {
+    width: 98.5%;
+    margin: 0 auto 2%;
+    height: 200px;
+  }
+//  a.resume_link {
+//    width: 33.5%;
+//    text-decoration: none;
+//    text-align: center;
+//    float:left;
+//    @include mobile {
+//      width: 88%;
+//      margin: 2% auto;
+//    }
+//  }
+  input[type="submit"] {
+    width: 47%;
+    float: right;
+    font-size: 12px;
+  }
+  button {
+    width: 47%;
+    float: left;
+  }
+  @include mobile {
+    margin-top: 22%;
+    .form_subject, #contact_text, .form_email, input[type="submit"], button {
+      width: 100%;
+      float: none;
+      margin: 2% auto;
+    }
+    
+  }
+}

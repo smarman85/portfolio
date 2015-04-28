@@ -1,0 +1,39 @@
+<section class="blog_content">
+
+    <h2>Display What?</h2>
+    <span class="date_posted">Posted On: 09.27.14</span>
+
+    <article>
+
+        <h4>Displaying Inline vs. inline-block</h4>
+
+        <p> An element that is displayed inline will not break the flow of the elements around it. For example:</p>
+
+        <%= image_tag("ex1.png", :alt => "inline") %>
+
+
+        <p> The word “line” sits inline with the words surrounding it as you would expect. Any changed to the  margins or padding will only change horizontal spacing and not affect spacing vertically. If we add a margin of 10px all the way around this element we will only see the space grow larger on the left and right and no change on the top or bottom.</p>
+
+        <p>Width is also ignored by an element that is displayed inline. In the image below you can see what happens when margin 10px and a width of 300px is called on an inline element</p>
+
+
+        <%= image_tag("ex2.png", :alt => "inline with margins") %>
+
+        <h4>Inline-block:</h4>
+
+        <p>An element set to inline-block will behave much in the same way as inline, with some very important differences. This type of display allows you, as the developer to set heights and widths and still remain within the flow of the elements surrounding it. The image below is an element that is displayed inline-block and has a height and width of 40px. You can see that the words remain somewhat inline, allow for widths and allow for vertical movement.</p>
+
+        <%= image_tag("ex3.png", :alt => "inline-block") %>
+
+
+        <h4>Takeaways :</h4>
+
+        <p>display inline :<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;will not accept height and width - it will just be ignored by the browser.<br>
+        display inline-block:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;take a height and with and still stay somewhat inline.
+
+        </p>
+
+    </article>
+</section>

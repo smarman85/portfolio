@@ -1,0 +1,116 @@
+// vars for the links
+
+$link-font: Verdana, geneva, sans-serif;
+$link-weight: bold;
+$link-color: #333333;
+
+$date-font: arial, helvetica, sans-serif;
+$tab-color: #F5F4F4;
+$header-background: rgba(102,95,96,0.7); 
+$article-link-color: #000000;
+ 
+// vars for the media queires
+$tablet-width: 786px;
+$desktop-width: 1024px;
+$mobile-width: 320px;
+
+// mobile-dropdown menu
+$text-color: yellow;
+$border-color: 1px solid yellow;
+$hamburger-menu: yellow;
+
+// colors for the markdown/ code snipits
+$editor: #303030;
+$ruby-keyword: #00ffff;
+$ruby-constant: #7fffd4;
+$ruby-identifier: #ffdead;
+
+//@mixin mobile {
+//  @media only screen
+//  and (max-device-width: 1020px),
+//  only screen and (max-device-width: 667px),
+//  only screen and (min-width: 320px){
+//    @content;
+//  }
+//}
+//
+//@mixin tablet {
+//  @media only screen
+//  and (min-device-width : 768px)
+//  and (max-device-width : 1024px) {
+//    @content;
+//  }
+//}
+//
+//@mixin desktop {
+//  @media (min-width: #{$desktop-width}) {
+//    @content;
+//  }
+//}
+
+
+// /* Smartphones (portrait and landscape) ----------- */
+@mixin mobile {
+  @media only screen and (max-device-width: 720px), screen and (max-width: 720px) {
+  /* Styles */
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (max-device-width: 720px), screen and (max-width: 720px) {
+  /* Smartphones (landscape) ----------- */
+    @content;
+  }
+}
+// 
+// /* Smartphones (portrait) ----------- */
+// @media only screen 
+// and (max-width : 320px) {
+// /* Styles */
+// }
+// 
+// /* iPads (portrait and landscape) ----------- */
+//@mixin tablet {
+//  @media only screen 
+//  and (min-device-width : 768px), 
+//  and screen and (max-device-width : 1023px) {
+//  /* Styles */
+//    @content;
+//  }
+//} 
+// /* iPads (landscape) ----------- */
+// @media only screen 
+// and (min-device-width : 768px) 
+// and (max-device-width : 1024px) 
+// and (orientation : landscape) {
+// /* Styles */
+// }
+// 
+// /* iPads (portrait) ----------- */
+// @media only screen 
+// and (min-device-width : 768px) 
+// and (max-device-width : 1024px) 
+// and (orientation : portrait) {
+// /* Styles */
+// }
+// 
+// /* Desktops and laptops ----------- */
+@mixin desktop {
+  @media only screen and (max-device-width: 1020px), screen and (max-width: 1020px) {
+  /* Styles */
+    @content;
+  }
+} 
+// /* Large screens ----------- */
+// @media only screen 
+// and (min-width : 1824px) {
+// /* Styles */
+// }
+// 
+// /* iPhone 4 ----------- */
+// @media
+// only screen and (-webkit-min-device-pixel-ratio : 1.5),
+// only screen and (min-device-pixel-ratio : 1.5) {
+// /* Styles */
+// }
