@@ -19,6 +19,18 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <script src="https://cdn.localizejs.com/localize.js"></script>
+
+  <script>!function(a){if(!a.Localize){a.Localize={};for(var e=["translate","untranslate","phrase","initialize","translatePage","setLanguage","getLanguage","detectLanguage","untranslatePage","bootstrap","prefetch","on","off"],t=0;t<e.length;t++)a.Localize[e[t]]=function(){}}}(window);</script>
+
+  <script>
+    Localize.initialize({
+      key: 'Z0OTpmEbbDZHB',
+      rememberLanguage: true,
+      saveNewPhrases: true,
+      translateBody: true
+   });
+</script>
 </head>
 <body>
   <div class="container">
@@ -335,7 +347,7 @@
               11.12.2014
             </span><br/>
             <span class="text">
-              How asking better questions leds to getting better answers
+              How asking better questions leads to getting better answers
             </span>
           </div>
           <div class="clear"></div>
